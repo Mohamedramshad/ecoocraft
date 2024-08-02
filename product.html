@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product page</title><link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/09492618d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <section class="bg-white fixed top-0 left-0 right-0 z-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+        <section class="wrapper flex items-center justify-between h-[50px] mb-[3%] px-4 md:px-8 ">
+            <div class="w-[50%] md:w-[40%] flex">
+                <img src="./image/logo.png" alt="Ecocraft Logo" class="w-[70%] md:w-[40%]">
+            </div>
+            <div class="hidden md:block">
+                <ul class="flex space-x-4 md:space-x-6 lg:space-x-10  mt-[5%]">
+                    <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Home</a></li>
+                    <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">About Us</a></li>
+                    <li><a href="/product.html" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Products</a></li>
+                    <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Gallery</a></li>
+                    <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-black transition duration-300 text-white px-[20%] py-[12%] will-change-auto hover:will-change-scroll bg-green-700 rounded">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg rounded-lg py-2 hidden">
+            <ul class="flex flex-col space-y-2 px-4 mt-[5%]">
+                <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Home</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">About Us</a></li>
+                <li><a href="http://127.0.0.1:5500/ecocraft/product.html#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Products</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Gallery</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    
+        <!-- JavaScript for Mobile Menu Toggle -->
+        <script>
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                var menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        </script>
+    </section>
+    
+    
+
+    <section class="">
+        <img src="./image/plywoodbg.PNG" alt="">
+
+    </section>
+
+    <section>
+        <section class="wrapper">
+            <h1 class="text-[28px] text-center pt-[4%]"> <span class="text-green-700">ECO CRAFT</span> UNIQUE PERSPECTIVE</h1>
+            <p class=" text-[12px] md:text-[16px] text-center pt-[1%] ">
+                At Austin Plywood, our commitment extends beyond delivering top-tier quality – we pledge products that align with their value. Our dedication to ethically sourced timber from sustainable farmlands underscores our mission to preserve natural ecosystems. As the frontrunners of India's eco-friendly plywood, we take on the responsibility of eradicating social and environmental threats. With state-of-the-art automated technology, we assure timely deliveries within a cost-effective range, all while upholding ecological equilibrium.
+                
+            </p>
+        </section>
+    </section>
+
+    <section class="pt-[4%] mt-[2%] w-full  bg-[url('./image/bg.jpg')] items-end">
+        <section class=" flex-wrap wrapper md:flex  ">
+            <div class="w-full  md:w-[40%] pb-6 pl-[10%]">
+                <img src="./image/Platinum_Plus.webp" alt="" class="w-full  md:w-[70%] ">
+
+            </div>
+
+            <div class=" md:w-[48%] mb-[8%] ">
+                <div class=" mt-[10%] mb-[5%]  md:pl-[50%]">
+                  <a href=" " class="w-full  md:items-end-end py-[2%] px-[6%] bg-slate-300 rounded-full ">Also available in BLOCKBOARD</a>
+
+                </div>
+                <img src="./image/platplus.png" alt="" class="pb-[5%]">
+                <div class=" mb-[4%] flex">
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500 mr-[8%]" >DESCRIPTION
+                    </a>
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500">FEATURES
+                    </a>
+                    
+                </div>
+                <p class="w-full text-justify  md:pt-[3%]">
+                    Eocarft Plus stands at the pinnacle of premium quality plywood. It is approved by Lloyds-United Kingdom, adhering to the British Standard BS 1088. 
+                    Ideal for luxury furniture and exclusively crafted from premium quality imported Gurjan Timber it is manufactured by top-of-the-line technology to deliver ultimate sophistication. Platinum Plus is the best plywood money can buy!
+                </p>
+            </div>
+
+            
+        </section>
+       
+    </section>
+
+    <!-- second line -->
+    <section class="pt-[4%] mt-[4%] w-full  bg-[url('./image/bg.jpg')] items-end">
+        <section class=" flex-wrap wrapper md:flex  ">
+            <div class="w-full  md:w-[40%] pb-6 pl-[10%]">
+                <img src="./image/Platinum_Plus.webp" alt="" class="w-full  md:w-[70%] ">
+
+            </div>
+
+            <div class=" md:w-[48%] mb-[8%] ">
+                <div class=" mt-[10%] mb-[5%]  md:pl-[50%]">
+                  <a href=" " class="w-full  md:items-end-end py-[2%] px-[6%] bg-slate-300 rounded-full ">Also available in BLOCKBOARD</a>
+
+                </div>
+                <img src="./image/platplus.png" alt="" class="pb-[5%]">
+                <div class=" mb-[4%] flex">
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500 mr-[8%]" >DESCRIPTION
+                    </a>
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500">FEATURES
+                    </a>
+                    
+                </div>
+                <p class="w-full text-justify  md:pt-[3%]">
+                    Eocarft Plus stands at the pinnacle of premium quality plywood. It is approved by Lloyds-United Kingdom, adhering to the British Standard BS 1088. 
+                    Ideal for luxury furniture and exclusively crafted from premium quality imported Gurjan Timber it is manufactured by top-of-the-line technology to deliver ultimate sophistication. Platinum Plus is the best plywood money can buy!
+                </p>
+            </div>
+
+            
+        </section>
+       
+    </section>
+
+    <!-- third -->
+
+    <section class="pt-[4%] w-full mt-[4%] bg-[url('./image/bg.jpg')] items-end">
+        <section class=" flex-wrap wrapper md:flex  ">
+            <div class="w-full  md:w-[40%] pb-6 pl-[10%]">
+                <img src="./image/Platinum_Plus.webp" alt="" class="w-full  md:w-[70%] ">
+
+            </div>
+
+            <div class=" md:w-[48%] mb-[8%] ">
+                <div class=" mt-[10%] mb-[5%]  md:pl-[50%]">
+                  <a href=" " class="w-full  md:items-end-end md:w-[90%] py-[2%] px-[6%] bg-slate-300 rounded-full ">Also available in BLOCKBOARD</a>
+
+                </div>
+                <img src="./image/platplus.png" alt="" class="pb-[5%]">
+                <div class=" mb-[4%] flex">
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500 mr-[8%]" >DESCRIPTION
+                    </a>
+                    <a href="" class="py-[2%] px-[6%] rounded-full border border-green-800 text-[14px] bg-green-500">FEATURES
+                    </a>
+                    
+                </div>
+                <p class="w-full text-justify  md:pt-[3%]">
+                    Eocarft Plus stands at the pinnacle of premium quality plywood. It is approved by Lloyds-United Kingdom, adhering to the British Standard BS 1088. 
+                    Ideal for luxury furniture and exclusively crafted from premium quality imported Gurjan Timber it is manufactured by top-of-the-line technology to deliver ultimate sophistication. Platinum Plus is the best plywood money can buy!
+                </p>
+            </div>
+
+            
+        </section>
+       
+    </section>
+
+    <footer>
+        <section class="bg-[#BAB86C] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full  py-20 px-10">
+    
+          <div class="w-full md:w-[95%]">
+            <img src="./image/logo.png" alt="" class="w-[40%] md:w-[70%]">
+            <p class=" w-full sm:text-[22px] md:text-[18px] text-justify">Founded in 2006, Ecocraft  Plywood has established itself as a leader in the interior infrastructure industry, renowned for its product excellence and streamlined service. The company's consistent commitment to quality and efficiency has made it a hallmark within the sector, setting high standards for others to follow.</p>
+          </div>
+    
+          <div class="flex mt-[15%]">
+            <div class="pl-0 md:pl-10 pt-10 md:pt-0">
+              <h3>Quick Links</h3>
+              <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contacts</li>
+              </ul>
+            </div>
+      
+            <div class="pt-10 md:pt-0 pl-10 mt-[%]">
+              <h4 class="pb-[3%]">Products</h4>
+            <ul>
+                <li class="pt-[5%]"><a href="">PVC Foam Board</a></li>
+                <li class="pt-[5%]"><a href="">Plywood</a></li>
+                <li class="pt-[5%]"><a href="">Laminates</a></li>
+                <li class="pt-[5%]"><a href="">MDF</a></li>
+                <li class="pt-[5%]"><a href="">Veneer</a></li>
+                </ul>
+            </div>
+          </div>
+    
+          <div class="pt-10 md:pt-0 mt-[15%]">
+            <h3 class="mb-[2%]">Quick Links</h3>
+            <ul>
+              <li><i class="fa-solid fa-location-dot mr-[2%]"></i> Door No: 56A, 54B, Vairamkode Road, Koloopalam, Codacal Post. Malappuram Dt. 676 108</li>
+              <li class="mr-[4%] mt-[2%]"> <i class="fa-solid fa-envelope mr-[2%]"></i>Email info@ecocraft.com</li>
+              <li class="mr-[4%] mt-[2%]"><i class="fa-solid fa-phone mr-[2%] "></i>Support 9747222202</li>
+            </ul>
+            <h4 class="flex mt-[2%]">
+              <li class="  instagram "><i class="fa-brands fa-instagram icon1 icon"></i></li>
+              <li class="ml-[5%] twitter pl-[4%]  " ><i class="fa-brands fa-twitter icon2 icon"></i></li>
+              <li class=" ml-[5%] youtube pl-[4%]" ><i class="fa-brands fa-youtube icon3 icon"></i></li>
+              <li class="ml-[5%] facebook pl-[4%] "><i class="fa-brands fa-facebook icon4 icon"></i></li>
+            </h4>
+          </div>
+    
+        </section>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecocraft</title><link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/09492618d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+      /* Custom animation for fade-in-up */
+      @keyframes fadeInUp {
+          0% {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          100% {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      /* Applying the animation with delay */
+      .fade-in-up {
+          animation: fadeInUp 0.7s forwards;
+          opacity: 0; /* Ensure it starts hidden */
+      }
+
+      /* Staggering delays for each element */
+      .fade-in-up:nth-child(1) {
+          animation-delay: 0.1s;
+      }
+
+      .fade-in-up:nth-child(2) {
+          animation-delay: 0.3s;
+      }
+
+      .fade-in-up:nth-child(3) {
+          animation-delay: 0.5s;
+      }
+
+      .fade-in-up:nth-child(4) {
+          animation-delay: 0.7s;
+      }
+  </style>
+
+
+    
+</head>
+<!-- fixed top-0 w-full -->
+<body>
+  <section class="bg-white fixed top-0 left-0 right-0 z-50 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+    <section class="wrapper flex items-center justify-between h-[50px] mb-[3%] px-4 md:px-8 ">
+        <div class="w-[50%] md:w-[40%] flex">
+            <img src="./image/logo.png" alt="Ecocraft Logo" class="w-[70%] md:w-[40%]">
+        </div>
+        <div class="hidden md:block">
+            <ul class="flex space-x-4 md:space-x-6 lg:space-x-10  mt-[5%]">
+                <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Home</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">About Us</a></li>
+                <li><a href="product.html" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Products</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-green-700 transition duration-300">Gallery</a></li>
+                <li><a href="#" class="text-base text-[14px] md:text-lg lg:text-xl hover:border-b-2 border-green-700 mb-[10%]  hover:text-black transition duration-300 text-white px-[20%] py-[12%] will-change-auto hover:will-change-scroll bg-green-700 rounded">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg rounded-lg py-2 hidden">
+        <ul class="flex flex-col space-y-2 px-4 mt-[5%]">
+            <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Home</a></li>
+            <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">About Us</a></li>
+            <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Products</a></li>
+            <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Gallery</a></li>
+            <li><a href="#" class="text-base text-[14px] md:text-lg hover:border-b-2 border-green-700 mb-[10%] hover:text-green-700 transition duration-300">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</section>
+
+
+    <section class="mt-[15%] md:mt-0" >  
+        <div class="swiper mySwiper  ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide min-h-100  lg:h-[700px]"><img src="./image/Capture1.PNG " alt="" class=""></div>
+            <div class="swiper-slide min-h-100  lg:h-[700px]"><img src="./image/capture2.PNG" alt="" class=""></div>
+            <div class="swiper-slide min-h-100  lg:h-[700px]"><img src="./image/Capture3.PNG" alt="" class=""></div>
+            
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        
+    </section> 
+    
+    <section>
+      <section class="wrapper">
+         <h3 class="text-[20px] text-green-700 text-center pt-[30px]">
+             ____  Ecocraft Assurance  ____
+         </h3>
+         <h1 class=" text-[30px] text-center pt-[5px]">
+              Experience plywood like never before with Ecocraft
+         </h1>
+
+         <div class="mt-[20px]">
+          <ul class="flex justify-center lg:justify-center flex-wrap md:flex-nowrap md:space-x-4  mt-[5%]">
+            <li class="w-[100%] mb-[50px] sm:w-[48%] md:w-[22%] px-[20px] py-[40px] md:mb-5 bg-black rounded-[30px]  fade-in-up relative ">
+              <img src="./image/assurance-icon1.png" alt=" " id="animatedIcon" class="w-[75px] h-[100px] absolute bg-green-700 px-[15px] py-[30px] rounded-full top-[-40px] left-[20px]">  
+              <h4 class="text-center mt-7 text-white text-lg font-semibold">
+                    Bespoke
+                </h4>
+                <p class="text-center text-lg mt-1 text-white ">
+                    Each Sheet is a Detailed <br> Masterpiece
+                </p>
+            </li>
+
+            <li class="w-[100%] mb-[50px] sm:w-[48%] md:w-[22%] px-[30px] py-[40px]  md:mb-5 bg-black rounded-[30px]  fade-in-up relative">
+              <img src="./image/assurance-icon2.png" alt=" "id="animatedIcon" class="w-[70px] h-[100px] absolute bg-green-700 px-[20px] py-[30px] rounded-full top-[-40px] left-[20px]">  
+                
+              <h4 class="text-center mt-7 text-white text-lg font-semibold">
+                    Authenticity
+                </h4>
+                <p class="text-center text-lg mt-1 text-white ">
+                    Plywood That Assures <br> Long-term Durability
+                </p>
+            </li>
+
+            <li class="w-[100%] mb-[50px] sm:w-[48%] md:w-[22%] px-[30px] py-[40px] md:mb-5 bg-black rounded-[30px]  fade-in-up relative">
+              <img src="./image/assurance-icon3.png" alt=" "id="animatedIcon" class="w-[70px] h-[100px] absolute bg-green-700 px-[20px] py-[30px] rounded-full top-[-40px] left-[20px]">  
+              <h4 class="text-center mt-7 text-white text-lg font-semibold">
+                    Versatility
+                </h4>
+                <p class="text-center text-lg mt-1 text-white pb-[50px]">
+                    A world of choices at <br> your fingertips
+                </p>
+            </li>
+
+            <li class="w-[100%] sm:w-[48%] md:w-[22%] px-[30px] py-[40px]  mb-5 bg-black rounded-[30px]  fade-in-up relative">
+              <img src="./image/assurance-icon4.png" alt=" "id="animatedIcon" class="w-[70px] h-[100px] absolute bg-green-700 px-[20px] py-[30px] rounded-full top-[-40px] left-[20px]">  
+              <h4 class="text-center mt-7 text-white text-lg font-semibold">
+                    Sustainability
+                </h4>
+                <p class="text-center text-lg mt-1 text-white ">
+                    Committed to <br> eco-friendly practices
+                </p>
+            </li>
+    </ul>
+        
+          <div>
+              <ul class="flex justify-center pt-[3%]">
+                  <li class="pr-[10%]">
+                      <h4 class="stroked-text text-white text-[20px] md:text-[50px] font-semibold border-b-2 border-black ">4.50M</h4>
+                      <h5 class="text-[12px] md:text-[18px] pt-[15px]">Sheets Per Annum</h5>
+                  </li>
+
+                  <li class="pr-[10%]">
+                    <h4 class="stroked-text text-white text-[20px] md:text-[50px] font-semibold border-b-2 border-black ">2500+</h4>
+                    <h5 class="text-[12px] md:text-[18px] pt-[15px]">Sales Outlets</h5>
+                </li>
+
+                <li>
+                  <h4 class="stroked-text text-white text-[20px] md:text-[50px] font-semibold border-b-2 border-black "> 5 Lakh+</h4>
+                  <h5 class="text-[12px] md:text-[18px] pt-[15px]">Delighted Customers</h5>
+                </li>
+              </ul>
+          </div>
+         </div>
+        
+      </section>
+  </section>
+
+  <section class="pt-[4%] wrapper">
+    <section class=" flex-col md:flex-row flex justify-between">
+        <div class=" w-[90%] md:w-[50%]">
+            <img src="./image/craft.jpg" alt="" class=" w-full rounded md:w-[70%] slide-in" id="animatedImage">
+        </div>
+        <div class="w-full md:w-[50%] mt-[5%] slide-in-text" id="animatedText">
+            <h2 class="text-[20px] text-black font-bold border-b-2 pb-[1%] border-black">Legacy</h2>
+            <p class="pt-[2%] text-[18px] text-justify">
+                Celebrating a remarkable 18-year journey since 2006,
+                Ecocraft Plywood is one of the leading players in the interior
+                infrastructure industry. Today, Ecocraft Plywood operates with a total installed
+                capacity of 4.50 million sheets per annum. At Ecocraft Plywood, we are committed
+                to delivering products and solutions that represent an invaluable investment for our
+                customers, along with lifetime insurance.
+            </p>
+            <div class="mt-[4%] justify-center">
+                <a href="" class="bg-black text-white rounded-full px-[6%] py-[2%]">Read More</a>
+            </div>
+        </div>
+    </section>
+</section>
+
+<script>
+  
+    document.addEventListener("DOMContentLoaded", function () {
+        const image = document.getElementById('animatedImage');
+        const text = document.getElementById('animatedText');
+
+        function handleScroll() {
+            const imageRect = image.getBoundingClientRect();
+            const textRect = text.getBoundingClientRect();
+            if (imageRect.top < window.innerHeight && imageRect.bottom >= 0) {
+                image.classList.add('slide-in-left');
+            }
+            if (textRect.top < window.innerHeight && textRect.bottom >= 0) {
+                text.classList.add('slide-in-right');
+            }
+            if (imageRect.top < window.innerHeight && imageRect.bottom >= 0 && textRect.top < window.innerHeight && textRect.bottom >= 0) {
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+    });
+</script>
+
+<style>
+  @keyframes slideInFromLeft {
+      0% {
+          transform: translateX(-100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  .slide-in-left {
+      animation: slideInFromLeft 2s ease-out forwards;
+  }
+
+  @keyframes slideInFromRight {
+      0% {
+          transform: translateX(100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  .slide-in-right {
+      animation: slideInFromRight 3s ease-out forwards;
+  }
+</style>
+
+  
+   <section class="pt-[4%]">
+    <section class="  flex-col md:flex-row wrapper flex justify-between">
+        
+      <div class="bg-black pr-[5%] w-full md:w-[48%] mt-[5%] pl-[10%] slide-in rounded-md relative md:left-10 z-20" id="content">
+        <h2 class="  mt-[5%] font-semiboldx flex text-green-500 pt-[7%]"><div class="bg-white my-3 h-[1px] w-8 mr-2 "> </div> ECOCRAFT PLYWOOD PRODUCTS </h2>
+        <h1 class="text-white text-[21px] font-bold">Turn Your Interiors Into Purposeful Spaces with Austin Plywood
+
+        </h1>
+        <h2 class="text-white pt-[3%] pr-[5%] "  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+          • Only plywood company in India to be approved by Lloyds-United Kingdom, adhering to the British Standard BS 1088.
+        </h2 >
+        <h2 class="text-white pt-[3%] pr-[5%]"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+          • World’s only BWP plywood that resists boiling water for upto 200 hours
+        </h2>
+        <h2 class="text-white pt-[3%] pr-[5%]"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+          • Lifetime warranty on plywood
+        </h2>
+
+        <div #swiperRef="" class="swiper mySwiper w-[100%] h-[170px] mb-[8%] pt-[5%] pl-[2%] ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./image/slide1.jpg" alt="" ></div>
+            <div class="swiper-slide"><img src="./image/slide2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./image/slide3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./image/slide5.jpg" alt=""></div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+          <div class="swiper-pagination text-green-700"></div>
+        </div>
+      
+        <p class="append-buttons">
+          <button class="prepend-2-slides">Prepend 2 Slides</button>
+          <button class="prepend-slide">Prepend Slide</button>
+          <button class="append-slide">Append Slide</button>
+          <button class="append-2-slides">Append 2 Slides</button>
+        </p>
+      
+
+      </div>
+
+        </div>
+        
+      <div class="right-0 absolute  md:w-[52%] hidden md:flex mb-[%]">
+        <img src="./image/xx.jpg" alt="" class="w-[90%] slide-in rounded-md h-[490px]" id="content">
+      </div>
+    </section>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const image = document.getElementById('content');
+        const text = document.getElementById('content');
+
+        function handleScroll() {
+            const imageRect = image.getBoundingClientRect();
+            const textRect = text.getBoundingClientRect();
+            if (imageRect.top < window.innerHeight && imageRect.bottom >= 0) {
+                image.classList.add('slide-in-left');
+            }
+            if (textRect.top < window.innerHeight && textRect.bottom >= 0) {
+                text.classList.add('slide-in-right');
+            }
+            if (imageRect.top < window.innerHeight && imageRect.bottom >= 0 && textRect.top < window.innerHeight && textRect.bottom >= 0) {
+                window.removeEventListener('scroll', handleScroll);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+    });
+</script>
+
+<style>
+  @keyframes slideInFromLeft {
+      0% {
+          transform: translateX(-100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  .slide-in-left {
+      animation: slideInFromLeft 2s ease-out forwards;
+  }
+
+  @keyframes slideInFromRight {
+      0% {
+          transform: translateX(100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
+
+  .slide-in-right {
+      animation: slideInFromRight 3s ease-out forwards;
+  }
+</style>
+ 
+   <section class="pt-[5%]">
+    <section class="flex-col flex-wrap md:flex-row wrapper flex justify-between items-center py-[50px]">
+      <div class=" w-full md:w-[40%] mt-10 md:mt-0 md:mr-[10%] animate-fadeInLeft">
+        <h4 class="font-bold text-[22px] pb-[2%] text-green-700">
+          ____ All-In-One Convenience
+        </h4>
+        <p class=" w-full md:text-[18px] text-justify mb-[4%] delay-500">
+          Explore our Plywood Cost Calculator for accurate budgeting and check out our Plywood insights.
+          Your convenience is our priority.
+        </p>
+      </div>
+      <div class=" w-full flex md:w-[45%] animate-fadeInRight">
+        <div class="pr-[10%] group">
+          <img src="./image/expertise-img1.png" alt="" class="w-[100%] transform transition-transform duration-300 group-hover:scale-105">
+          <h4 class="font-semibold mt-[3%] text-[18px] text-center group-hover:text-green-700 transition-colors duration-300">Plywood Cost <br>Calculator</h4>
+        </div>
+        
+        <div class="group">
+          <img src="./image/expertise-img3 (1).webp" alt="" class="transform transition-transform duration-300 group-hover:scale-105">
+          <h4 class="font-semibold mt-[3%] text-[18px] text-center group-hover:text-green-700 transition-colors duration-300">Plywood <br>Insights</h4>
+        </div>
+      </div>
+    </section>
+    
+
+   </section>
+   <div class=" cont s--inactive">
+    <!-- cont inner start -->
+    <div class="cont__inner">
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="hidden  md:flex el__heading">Bedroom</h2>
+            </div>
+            <div class="el__content">
+              <div class=" el__text">Bedroom</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">1</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="1">1</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class=" hidden  md:flex el__heading">Dining Area</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">Dining Area</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">2</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="2">2</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="hidden  md:flex el__heading">Living area</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">living area</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">3</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="3">3</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="hidden  md:flex el__heading">kitchen</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">kitchen</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">4</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="4">4</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+      <!-- el start -->
+      <div class="el">
+        <div class="el__overflow">
+          <div class="el__inner">
+            <div class="el__bg"></div>
+            <div class="el__preview-cont">
+              <h2 class="hidden  md:flex el__heading">office</h2>
+            </div>
+            <div class="el__content">
+              <div class="el__text">office</div>
+              <div class="el__close-btn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="el__index">
+          <div class="el__index-back">5</div>
+          <div class="el__index-front">
+            <div class="el__index-overlay" data-index="5">5</div>
+          </div>
+        </div>
+      </div>
+      <!-- el end -->
+    </div>
+    <!-- cont inner end -->
+  </div>
+
+  <!-- responsive -->
+  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+  <script src="script.js"></script>
+
+  <!-- <footer>
+    <section class="bg-[#BAB86C]">
+      <div class="lg:hid8den wrapper ">
+        <img src="./image/logo.png" alt="" class="w-[30%]">
+        <p class="">
+          Ecocraft - The king of Durability. We offer several benefits over wood, in terms of attributes and cost.
+        </p>
+      </div>
+
+      <section class="wrapper flex flex-wrap justify-between items-center pt-[3%]">
+        <div class=" hidden lg:block w-[40%]">
+          <img src="./image/logo.png" alt="" class="w-[30%]">
+          <p class="w-[70%]">
+            Founded in 2006, Austin Plywood has established itself as a leader in the interior infrastructure industry, renowned for its product excellence and streamlined service. The company's consistent commitment to quality and efficiency has made it a hallmark within the sector, setting high standards for others to follow.
+          </p>
+        </div>
+
+          
+        </div>
+        <section class="w-[50%] lg:w-[20%]">
+          <h4 class="pt-[]">Quick Links</h4>
+          <ul>
+           <li class="pt-[5%]" >
+            <a href="">Home</a>
+           </li> 
+           <li class="pt-[5%]" > 
+            <a href="">About Us</a>
+           </li>
+           <li class="pt-[5%]" >
+            <a href="">Gallery</a>
+           </li>
+           <li class="pt-[5%]">
+            <a href="">Contact Us</a>
+           </li>
+          </ul>
+        </section>
+
+        <section class="w-[20%]">
+          <h4 class="pb-[3%]">Products</h4>
+          <ul>
+
+            <li class="pt-[5%]"><a href="">PVC Foam Board</a></li>
+            <li class="pt-[5%]"><a href="">Plywood</a></li>
+            <li class="pt-[5%]"><a href="">Laminates</a></li>
+            <li class="pt-[5%]"><a href="">MDF</a></li>
+            <li class="pt-[5%]"><a href="">Veneer</a></li>
+
+          </ul>
+        </section>
+
+        <section class="w-[20%]">
+          <h4 class="pb-[2%]">Contact Us</h4>
+          <ul>
+            <li class="flex">
+              <li>
+                <p class="leading-9">  
+                <i class="fa-solid fa-location-dot mr-[2%]"></i> 
+                Door No: 56A, 54B, Vairamkode Road, Koloopalam, Codacal Post. Malappuram Dt. 676 108</p></li>
+            </li>
+
+            <li class="flex mb-[4%]">
+              <h4>
+                <h3 class="mr-[4%]"> <i class="fa-solid fa-envelope mr-[2%]"></i></h3>
+                 <h4 class="">Email info@ecocraft.com</h4>
+              
+
+            </li>
+
+            <li class="flex">
+            
+              <h3 class="mr-[4%]"><i class="fa-solid fa-phone "></i></h3> 
+              <h4>Support 9747222202</h4>
+            </li>
+            
+          
+          </ul> 
+
+          
+
+            <ul class="flex ">
+                <li class="instagram "><i class="fa-brands fa-instagram icon1 icon"></i></li>
+                <li class="twitter pl-[4%]  " ><i class="fa-brands fa-twitter icon2 icon"></i></li>
+                <li class="youtube pl-[4%]" ><i class="fa-brands fa-youtube icon3 icon"></i></li>
+                <li class="facebook pl-[4%] "><i class="fa-brands fa-facebook icon4 icon"></i></li>
+            </ul>
+    
+        
+        </section>
+      </section>
+      
+    </section>
+  </footer> -->
+
+  <footer>
+    <section class="bg-[#BAB86C] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full  py-20 px-10">
+
+      <div class="w-full md:w-[95%]">
+        <img src="./image/logo.png" alt="" class="w-[40%] md:w-[70%]">
+        <p class=" w-full sm:text-[22px] md:text-[18px] text-justify">Founded in 2006, Ecocraft  Plywood has established itself as a leader in the interior infrastructure industry, renowned for its product excellence and streamlined service. The company's consistent commitment to quality and efficiency has made it a hallmark within the sector, setting high standards for others to follow.</p>
+      </div>
+
+      <div class="flex mt-[15%]">
+        <div class="pl-0 md:pl-10 pt-10 md:pt-0">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Gallery</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+  
+        <div class="pt-10 md:pt-0 pl-10 mt-[%]">
+          <h4 class="pb-[3%]">Products</h4>
+        <ul>
+            <li class="pt-[5%]"><a href="">PVC Foam Board</a></li>
+            <li class="pt-[5%]"><a href="">Plywood</a></li>
+            <li class="pt-[5%]"><a href="">Laminates</a></li>
+            <li class="pt-[5%]"><a href="">MDF</a></li>
+            <li class="pt-[5%]"><a href="">Veneer</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="pt-10 md:pt-0 mt-[15%]">
+        <h3 class="mb-[2%]">Quick Links</h3>
+        <ul>
+          <li><i class="fa-solid fa-location-dot mr-[2%]"></i> Door No: 56A, 54B, Vairamkode Road, Koloopalam, Codacal Post. Malappuram Dt. 676 108</li>
+          <li class="mr-[4%] mt-[2%]"> <i class="fa-solid fa-envelope mr-[2%]"></i>Email info@ecocraft.com</li>
+          <li class="mr-[4%] mt-[2%]"><i class="fa-solid fa-phone mr-[2%] "></i>Support 9747222202</li>
+        </ul>
+        <h4 class="flex mt-[2%]">
+          <li class="  instagram "><i class="fa-brands fa-instagram icon1 icon"></i></li>
+          <li class="ml-[5%] twitter pl-[4%]  " ><i class="fa-brands fa-twitter icon2 icon"></i></li>
+          <li class=" ml-[5%] youtube pl-[4%]" ><i class="fa-brands fa-youtube icon3 icon"></i></li>
+          <li class="ml-[5%] facebook pl-[4%] "><i class="fa-brands fa-facebook icon4 icon"></i></li>
+        </h4>
+      </div>
+
+    </section>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="script.js">
+    
+     new WOW().init();
+
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeInRight: 'fadeInRight 1s ease-out forwards',
+            fadeInLeft: 'fadeInLeft 1s ease-out forwards',
+          },
+          keyframes: {
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(100px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-100px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <script>
+    AOS.init({
+        offset: 12, // offset (in px) from the original trigger point
+        delay: 500, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+</script>
+    
+    
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          // el: ".swiper-pagination",
+        },
+        autoplay:{
+          delay:2500,
+          disableOnInteraction: false,
+        }
+      });
+
+      srollReveal({
+        rest: true,
+        distance: '60px',
+        duration: 400
+      }
+
+      );
+      scrollReveal().reveal('.one, .section-title',{delay: 500, origin: 500,origin: 'left'});
+      scrollReveal().reveal('.sec-01 .one',{delay: 500, origin: 500,origin: 'bottom'});
+      scrollReveal().reveal('.text-box',{delay: 700, origin:  'right'});
+      scrollReveal().reveal('.media',{delay: 500, origin: 500,origin: 'bottom'});
+
+
+
+    </script>
+    </body>
+</html>
